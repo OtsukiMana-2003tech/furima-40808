@@ -20,6 +20,9 @@
 
 - has_many :items
 - has_many :sales
+- belongs_to_active_hash :birth_years
+- belongs_to_active_hash :birth_months
+- belongs_to_active_hash :birth_days
 
 ## items テーブル
 
@@ -39,6 +42,11 @@
 
 - belongs_to :user
 - has_one :sale
+- belongs_to_active_hash :categories
+- belongs_to_active_hash :conditions
+- belongs_to_active_hash :delivery_fees
+- belongs_to_active_hash :shipping_areas
+- belongs_to_active_hash :shipping_times
 
 ## sales テーブル
 
@@ -69,6 +77,7 @@
 ### Association
 
 - belongs_to :sale
+- belongs_to_active_hash :prefectures
 
 ## ActiveHash モデル
 
